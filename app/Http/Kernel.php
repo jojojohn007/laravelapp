@@ -47,7 +47,9 @@ class Kernel extends HttpKernel
     ];
 protected $routeMiddleware = [
 'FormValidate' =>\App\Http\Middleware\FormValidate::class,
-        'Auth' => \App\Http\Middleware\Auth::class
+        'Auth' => \App\Http\Middleware\Auth::class,
+        'CheckUser' => \App\Http\Middleware\CheckUser::class,
+
 
 ];
     /**

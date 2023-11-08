@@ -54,3 +54,6 @@ nl2br
 
 nl2br
 <a href="/delete">run a grouped middleware</a>
+
+nl2br
+<a href="/verify">run a middleware with variable passed in </a>

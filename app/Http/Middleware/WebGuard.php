@@ -16,7 +16,8 @@ class WebGuard
     public function handle(Request $request, Closure $next): Response
     {
 
-        echo 'webgurad';
+        echo 'Global middleware ';
+        echo '<br>';
 $age =  $request->age ;
 if($age){
             if ($age >= 18) {

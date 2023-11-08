@@ -50,3 +50,32 @@ return view('login');
 
 
 });
+//laravel middleware with parameters
+
+Route::get('/verify',function(){
+return view('/verify');
+})->middleware(['CheckUser:abc@gmail.com']);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
