@@ -56,6 +56,11 @@ Route::get('/verify',function(){
 return view('/verify');
 })->middleware(['CheckUser:abc@gmail.com']);
 
+//Implicit controller
+
+Route::get('/show ',function(){
+    return view('show');
+});
 
 
 
