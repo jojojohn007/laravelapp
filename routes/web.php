@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,12 +24,12 @@ Route::get('/posts',function(){
 
 
 Route::get('/', function () {
-    return view('test');
+    return view('home');
 });
 
 //calling controller method from route
 //
-// Route::get('/', 'App\Http\Controllers\HomeController@index');
+// Route::get('/', 'HomeController@index');
 
 Route::get('/index', [HomeController::class, 'index']);
 
@@ -58,16 +59,18 @@ return view('/verify');
 
 //Implicit controller
 
-Route::get('/show ',function(){
-    return view('show');
+
+
+Route::controller('user','UserController');
+
+Route::get('user/{id}',"UserController@showProfile");
+
+// laravel request
+Route::get('/auth',function(){
+    return view('auth');
 });
 
-
-
-
-
-
-
+Route::post('/auth',[UserController::class,'signup'])->name('signup');
 
 
 

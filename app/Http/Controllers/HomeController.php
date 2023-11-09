@@ -11,4 +11,6 @@ class HomeController extends Controller
     public function index(){
         echo 'this is a index function';
     }
+
+    
 }
